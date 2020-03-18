@@ -137,4 +137,3 @@ def bot_main():
 
     bot.polling(none_stop=True)
 
-bot_main()
