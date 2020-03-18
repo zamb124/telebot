@@ -132,16 +132,6 @@ def bot_main():
         print(responce.text)
         return data.get('task').get('id')
 
-    while True:
-        try:
-            bot.polling(none_stop=True, timeout=100)
-        except Exception as ex:
-            print(ex)
-            time.sleep(1)
+    bot.polling(none_stop=True)
 
-while True:
-    try:
-        bot_main()
-    except Exception as ex:
-        print(ex)
-        time.sleep(1)
+#bot_main()
