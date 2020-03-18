@@ -1,25 +1,28 @@
 import telebot, uuid, os, requests, time
-path = os.getcwd()
-print("Текущая рабочая директория %s" % path)
-token = '1002705356:AAH6tQVXl_wW97YoL77BkoYQwXMBVjTI3M8'
-bot = telebot.TeleBot(token)
-
-keyboard1 = telebot.types.ReplyKeyboardMarkup()
-keyboard1.row('Ввести новый тикет', 'Выход')
-keyboard2 = telebot.types.ReplyKeyboardMarkup()
-keyboard2.row('Ввести новый тикет', 'Завершить', 'Выход',)
-name = ''
-surname = []
-id = ''
-new_path = ''
-age = 0
-#login = 'zambas124@gmail.com'
-login = 'a.pisarenko@akrikhin.ru'
-#key = 'TNPqlBA55hkrZVVmRWjBvY~tgQAGyrlwYvuKsLg22VIdrsDoJOPk9ofrewo-4RZIIX3oL07Bk80KETRxYHlwTQHl904cRce2'
-key = 'HqQ-qKwHZg6Brfnbv2pL5UBDnRTOaSiz35JZx~Ynsa4C9v4WcZPsiAGgngzx-JJ9hhpGwWPDkGwm7cdaoSF2-1re6z5TkZWD'
 memory = {}
-
 def bot_main():
+    path = os.getcwd()
+    print("Текущая рабочая директория %s" % path)
+    token = '1002705356:AAH6tQVXl_wW97YoL77BkoYQwXMBVjTI3M8'
+    bot = telebot.TeleBot(token)
+
+
+    keyboard1 = telebot.types.ReplyKeyboardMarkup()
+    keyboard1.row('Ввести новый тикет', 'Выход')
+    keyboard2 = telebot.types.ReplyKeyboardMarkup()
+    keyboard2.row('Ввести новый тикет', 'Завершить', 'Выход',)
+    name = ''
+    surname = []
+    id = ''
+    new_path = ''
+    age = 0
+    #login = 'zambas124@gmail.com'
+    login = 'a.pisarenko@akrikhin.ru'
+    #key = 'TNPqlBA55hkrZVVmRWjBvY~tgQAGyrlwYvuKsLg22VIdrsDoJOPk9ofrewo-4RZIIX3oL07Bk80KETRxYHlwTQHl904cRce2'
+    key = 'HqQ-qKwHZg6Brfnbv2pL5UBDnRTOaSiz35JZx~Ynsa4C9v4WcZPsiAGgngzx-JJ9hhpGwWPDkGwm7cdaoSF2-1re6z5TkZWD'
+
+
+
     @bot.message_handler(content_types=['text'])
     def start(message):
         if message.text == 'Ввести новый тикет':
@@ -134,4 +137,4 @@ def bot_main():
 
     bot.polling(none_stop=True)
 
-#bot_main()
+bot_main()
