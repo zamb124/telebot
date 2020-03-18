@@ -25,7 +25,7 @@ SECRET_KEY = '2wgb$2ch91h_z@3&(b!b^ik0azhss(4vg^^poua-^#eiu_1m4m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zambas.pythonanywhere.com']
+ALLOWED_HOSTS = ['zambas.pythonanywhere.com', 'localhost']
 
 
 # Application definition
